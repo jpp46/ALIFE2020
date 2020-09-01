@@ -1,0 +1,9 @@
+#PBS -l nodes=1:ppn=4
+#PBS -l walltime=30:00:00
+#PBS -M jpowers4@uvm.edu
+#PBS -m bea
+#PBS -N vehicles
+
+cd $HOME/Projects/Vehicles2/
+echo "This is myjob running on " `hostname`
+julia main.jl $PBS_ARRAYID 205
